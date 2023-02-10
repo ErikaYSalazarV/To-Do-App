@@ -30,11 +30,6 @@ jobs:
           else
           npm i
           fi
-    - run: echo $USER
-    - run: echo $GROUP
-    - name: Fix permissions
-      run: |
-        sudo chown -R root:root /etc/todos
       
     - name: Test the app
       working-directory: ${{ env.working-directory }} 
