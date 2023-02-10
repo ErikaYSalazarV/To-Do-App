@@ -30,8 +30,9 @@ jobs:
           else
           npm i
           fi
-    - name: Grant execute permissions
-      run: sudo chmod +x /home/runner/work/To-Do-App/To-Do-App/app
+    - name: Fix permissions
+      run: |
+        sudo chown -R <username>:<group> /etc/todos
       
     - name: Test the app
       working-directory: ${{ env.working-directory }} 
