@@ -7,14 +7,14 @@ env:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Move to app directory
-      run: cd /app
+      run: cd ./app
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
@@ -29,8 +29,6 @@ jobs:
 
     - name: Test the app
       run: npm test
-
-
 
   build:
   
