@@ -38,7 +38,7 @@ jobs:
 
     - name: Test the app
       working-directory: ${{ env.working-directory }} 
-      run: npm test
+      run: sudo npm test
       
   build:
   
