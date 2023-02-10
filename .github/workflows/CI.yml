@@ -23,13 +23,14 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
         
-    - run: yarn install --frozen-lockfile
-    - run: yarn lint
-    - run: yarn test:ci
+    
 
     - name: Install dependencies
       working-directory: ${{ env.working-directory }}
-      run: npm ci
+    - run: yarn install --frozen-lockfile
+    - run: yarn lint
+    - run: yarn test:ci
+    - run: npm ci
 
 
 
