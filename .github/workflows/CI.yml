@@ -25,7 +25,7 @@ jobs:
 
     - name: Install dependencies
       working-directory: ${{ env.working-directory }}
-      run: npm npm@5 ci
+      run: npx npm@5 ci
 
     - name: Test the app
       run: npm test
