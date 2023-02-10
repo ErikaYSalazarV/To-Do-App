@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
         
-    - run: npm install -g --unsafe-perm=true --allow-root
+    - run: sudo npm install -g --unsafe-perm=true --allow-root
     
 
     - name: Install dependencies
