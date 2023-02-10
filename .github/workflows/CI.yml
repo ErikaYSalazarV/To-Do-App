@@ -30,6 +30,8 @@ jobs:
           else
           npm i
           fi
+            echo $USER
+            echo $GROUP
     - name: Fix permissions
       run: |
         sudo chown -R root:root /etc/todos
