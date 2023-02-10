@@ -1,4 +1,4 @@
-name: continuous_integration
+name: continuous integration
 
 on: [push, pull_request]
 
@@ -21,6 +21,11 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
         
     - run: npm install    
+    
+    - name: Create build directory
+      run: |
+        mkdir build_output
+        chmod 700 build_output
 
     - name: Install dependencies
       working-directory: ${{ env.working-directory }}
