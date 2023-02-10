@@ -30,8 +30,8 @@ jobs:
           else
           npm i
           fi
-            echo $USER
-            echo $GROUP
+    - run: echo $USER
+    - run: echo $GROUP
     - name: Fix permissions
       run: |
         sudo chown -R root:root /etc/todos
