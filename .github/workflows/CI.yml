@@ -20,11 +20,6 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
         
-    - name : Install npm
-      working-directory: ${{ env.working-directory }}
-      run: sudo npm install -g --unsafe-perm=true --allow-root
-    
-
     - name: Install dependencies
       working-directory: ${{ env.working-directory }}
       run: |
