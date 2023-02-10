@@ -23,13 +23,13 @@ jobs:
     - name: Install dependencies
       working-directory: ${{ env.working-directory }}
       run: |
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
+        if [ -e yarn.lock ]; then
+          echo "Yarn lockfile found, using yarn to install dependencies"
+          yarn
+        else
+          echo "No yarn lockfile found, using npm to install dependencies"
           npm ci
-          else
-          npm i
-          fi
+        fi
       
     - name: Test the app
       working-directory: ${{ env.working-directory }} 
