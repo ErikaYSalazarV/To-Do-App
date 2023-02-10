@@ -37,6 +37,7 @@ jobs:
           fi
 
     - name: Test the app
+      working-directory: ${{ env.working-directory }}
       run: npm test
       
   build:
