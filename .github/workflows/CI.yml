@@ -36,6 +36,8 @@ jobs:
     - name: Test the app
       working-directory: ${{ env.working-directory }} 
       run: npm test
+      env:
+        NODE_ENV: test
       
   build:
   
