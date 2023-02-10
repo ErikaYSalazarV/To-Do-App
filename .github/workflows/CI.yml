@@ -27,9 +27,14 @@ jobs:
 
     - name: Install dependencies
       working-directory: ${{ env.working-directory }}
-      run: npm ci
-
-
+      run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
 
     - name: Test the app
       run: npm test
