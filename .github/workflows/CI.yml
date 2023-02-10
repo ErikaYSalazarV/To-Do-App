@@ -1,9 +1,9 @@
-name: continuous integration
+name: CI for Node.js
 
 on:
   push:
     branches:
-      - "main"
+      - main
 
 env:
   NODE_VERSION: 14
@@ -23,14 +23,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: /app/package.json
-
-    - name: Install production dependencies
-      run: npm ci
-      working-directory: /app/package.json
+      working-directory: /app
 
     - name: Run tests
       run: npm test
+      working-directory: /app
 
   build:
   
