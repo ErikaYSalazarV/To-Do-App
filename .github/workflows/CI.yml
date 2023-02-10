@@ -7,7 +7,7 @@ env:
 
 jobs:
   test:
-    runs-on: ubuntu-20.04
+    runs-on: self-hosted
     env:
       working-directory: ./app/
 
@@ -39,7 +39,7 @@ jobs:
       
   build:
   
-    runs-on: ubuntu-20.04
+    runs-on: self-hosted
     steps:
       -
         name: Checkout
