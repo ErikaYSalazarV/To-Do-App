@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request]
 
 env:
-  NODE_VERSION: test
+  NODE_VERSION: 6
 
 jobs:
   test:
