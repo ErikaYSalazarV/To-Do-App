@@ -23,11 +23,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: /home/runner/work/To-Do-App/To-Do-App/app
+      working-directory: /app
 
     - name: Install production dependencies
       run: npm ci
-      working-directory: /home/runner/work/To-Do-App/To-Do-App/app
+      working-directory: /app
 
     - name: Run tests
       run: npm test
