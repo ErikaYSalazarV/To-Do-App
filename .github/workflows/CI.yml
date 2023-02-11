@@ -55,4 +55,4 @@ jobs:
       
     - name: Set output
       run: echo "::set-output name=test-build-release-result::success"
-      if: steps.build.outputs.status == '0
+      if: steps.build.outputs.status == '0'
