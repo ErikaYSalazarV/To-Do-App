@@ -4,10 +4,16 @@ on:
   workflow_run:
  
 jobs:
-  job-b:
+  deploy:
     runs-on: ubuntu-latest
-    needs: [job-test-build-release]
-
+    
     steps:
-    - name: Realizar tarea B
+    - name: Get CI Workflow Output
+      id: getoutput
+      uses: actions/bin/filter@v2
+      with:
+        args: workflow run query
+
+    - name: B
+      if: steps.getoutput.outputs.job-a-result == 'success'
       run: echo "Ejecutando tarea B"
