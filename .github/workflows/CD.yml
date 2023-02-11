@@ -14,6 +14,6 @@ jobs:
       with:
         args: workflow run query
 
-    - name: B
+    - name: B_
       if: steps.getoutput.outputs.job-a-result == 'success'
       run: echo "Ejecutando tarea B"
