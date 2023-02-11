@@ -51,3 +51,8 @@ jobs:
         file: ./app/Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/todoapp:github-actions
+      id : build
+      
+    - name: Set output
+      run: echo "::set-output name=test-build-release-result::success"
+      if: steps.build.outputs.status == '0
