@@ -1,0 +1,13 @@
+name: continous_deploy
+
+on:
+  workflow_run:
+ 
+jobs:
+  job-b:
+    runs-on: ubuntu-latest
+    needs: [job-test-build-release]
+
+    steps:
+    - name: Realizar tarea B
+      run: echo "Ejecutando tarea B"
