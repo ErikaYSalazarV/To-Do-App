@@ -17,11 +17,7 @@ jobs:
     - name: Pull Docker Image
       run: |
         docker pull erikaysalazarv/todoapp:latest
-
-    - name: Deploy Docker Image
-      run: |
-        sudo docker run -p 8081:3000 -d erikaysalazarv/todoapp:latest
-        
+      
     - name: Start Docker Container
       run: |
         docker run -d --name todoappa -p 192.168.100.91:1997:3000 erikaysalazarv/todoapp:latest
