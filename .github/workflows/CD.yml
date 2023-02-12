@@ -23,8 +23,6 @@ jobs:
         sudo docker run -p 8080:3000 -d erikaysalazarv/todoapp:latest
         
     - name: Start Docker Container
-      uses: docker/run-action@v1
-      with:
-        publish: 127.0.0.1:8080:3000
-        name: todoapp
+      run: |
+        docker run -d --name todoapp -p 127.0.0.1:8080:3000 erikaysalazarv/todoapp:latest
 
