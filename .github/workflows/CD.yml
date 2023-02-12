@@ -15,10 +15,8 @@ jobs:
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
     - name: Pull Docker Image
-      uses: docker/pull-action@v2
-      with:
-        source: erikaysalazarv/todoapp
-        tag: latest
+      run: |
+        docker pull erikaysalazarv/todoapp:latest
 
     - name: Deploy Docker Image
       run: |
