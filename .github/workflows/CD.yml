@@ -21,4 +21,5 @@ jobs:
     - name: Start Docker Container
       run: |
        docker run -d -p 127.0.0.2:8082:3000 erikaysalazarv/todoapp:latest
+       sudo ufw allow 8082/tcp
        docker ps 
