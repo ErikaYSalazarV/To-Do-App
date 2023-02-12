@@ -1,4 +1,4 @@
-name: continous_deploy_
+name: continous_deploy
 
 on: [push]
  
@@ -20,9 +20,9 @@ jobs:
 
     - name: Deploy Docker Image
       run: |
-        sudo docker run -p 8080:3000 -d erikaysalazarv/todoapp:latest
+        sudo docker run -p 8081:3000 -d erikaysalazarv/todoapp:latest
         
     - name: Start Docker Container
       run: |
-        docker run -d --name todoapp -p 127.0.0.1:8080:3000 erikaysalazarv/todoapp:latest
+        docker run -d --name todoapp -p 127.0.0.1:8081:3000 erikaysalazarv/todoapp:latest
 
