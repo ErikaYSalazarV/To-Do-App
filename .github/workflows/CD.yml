@@ -22,7 +22,5 @@ jobs:
       run: |
        docker run -d -p 127.0.0.1:3000:3000 erikaysalazarv/todoapp:latest
        docker ps 
-       docker logs
        docker star
        docker inspect
-       z
