@@ -1,10 +1,6 @@
 name: continous_deploy_
 
-on:
-  workflow_run:
-    types: [completed]
-    workflows:
-      - CI
+on: [push]
  
 jobs:
   deploy:
