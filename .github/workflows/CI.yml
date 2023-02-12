@@ -50,7 +50,4 @@ jobs:
         context: .
         file: ./app/Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/todoapp:github-actions
-      
-
-      if: steps.build.outputs.status == '0'
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/todoapp:latest
