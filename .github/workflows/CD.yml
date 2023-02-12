@@ -20,4 +20,5 @@ jobs:
       
     - name: Start Docker Container
       run: |
-        docker run -d --name dockerapp1 -p 127.20.95.5:8080:3000 erikaysalazarv/todoapp:latest
+        docker -H 127.20.95.9:1997 run -d -p 8080:3000 todo
+        docker -H 127.20.95.9:1997 run -d -v erikaysalazarv/todoapp:latest -p 8080:3000 todo
