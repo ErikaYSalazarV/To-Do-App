@@ -1,10 +1,6 @@
 name: continous_deploy
 
-on:
-  workflow_run:
-    types: [completed]
-    workflows: continuous_integration
-
+on: [push]
 jobs:
   deploy:
     runs-on: self-hosted
