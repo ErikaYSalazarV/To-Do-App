@@ -45,5 +45,5 @@ jobs:
       uses: docker/setup-buildx-action@v2
       
     - name: Build and push
-      run: docker build -t erikaysalazarv/todoapp:latest ./app
+      run: docker build -t erikaysalazarv/todoapp:latest ../app
            docker push erikaysalazarv/todoapp:latest
