@@ -3,7 +3,7 @@ name: continous_deploy_
 on:
   workflow_run:
     types: [completed]
-    workflows: CI
+    workflows: continuous_integration
 
 jobs:
   deploy:
