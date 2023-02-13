@@ -20,5 +20,5 @@ jobs:
       
     - name: Start Docker Container
       run: |
-       docker run -d -p 172.17.0.1:2222:3000 erikaysalazarv/todoapp:latest
+       docker run 172.17.0.1:2222:3000 erikaysalazarv/todoapp:latest
        docker ps 
