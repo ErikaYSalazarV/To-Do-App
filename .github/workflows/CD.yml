@@ -19,6 +19,7 @@ jobs:
 
     - name: Pull Docker Image
       run: |
+        docker system prune
         docker pull erikaysalazarv/todoapp:latest
       
     - name: Start Docker Container
