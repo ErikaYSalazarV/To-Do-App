@@ -20,5 +20,6 @@ jobs:
       
     - name: Start Docker Container
       run: |
-       docker -H tcp://192.168.33.10:2222 run -d -p 8080:3000 -P erikaysalazarv/todoapp:latest
+       docker  run -d -p 192.168.33.10:8080:3000 -P erikaysalazarv/todoapp:latest
        docker ps 
+       echo docker pwd
