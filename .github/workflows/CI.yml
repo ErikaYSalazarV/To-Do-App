@@ -1,6 +1,8 @@
 name: continuous_integration
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
 
 jobs:
   test-build-release:
