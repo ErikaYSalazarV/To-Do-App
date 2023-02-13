@@ -1,4 +1,4 @@
-name: continous_deploy_
+name: continous_deploy
 
 on:
   workflow_run:
