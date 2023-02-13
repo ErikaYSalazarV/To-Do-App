@@ -20,5 +20,5 @@ jobs:
       
     - name: Start Docker Container
       run: |
-       docker run -d -p localhost:8080:3000 -P erikaysalazarv/todoapp:latest
+       docker run -d -p 8080:3000 -P erikaysalazarv/todoapp:latest
        docker ps 
