@@ -20,5 +20,5 @@ jobs:
       
     - name: Start Docker Container
       run: |
-       docker run -d -p 8080:3000 -P erikaysalazarv/todoapp:latest
+       docker -H 192.168.33.10:2222 run -d -p 8080:3000 -P erikaysalazarv/todoapp:latest
        docker ps 
