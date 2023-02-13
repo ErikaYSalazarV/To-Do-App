@@ -1,4 +1,4 @@
-name: continous_deploy
+name: continous_deploy_
 
 on: [push]
 
