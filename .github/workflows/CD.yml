@@ -18,7 +18,7 @@ jobs:
       run: |
         docker pull erikaysalazarv/todoapp:latest
       
-    - name: Start Docker Container.
+    - name: Start Docker Container
       run: |
        docker run -d -p 2222:3000 erikaysalazarv/todoapp:latest
        docker ps 
