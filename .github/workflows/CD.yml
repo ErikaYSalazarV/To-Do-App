@@ -21,5 +21,3 @@ jobs:
     - name: Start Docker Container
       run: |
        docker  run -d -p 3000:3000 erikaysalazarv/todoapp:latest
-       docker ps 
-       pwd
